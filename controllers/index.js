@@ -38,7 +38,11 @@ const home = async (req, res) => {
 };
 
 const about = (req, res) => {
-    res.render("about.ejs");
+    const { loggedIn, fullName } = req.session;
+    res.render("about.ejs", {
+        loggedIn,
+        fullName,
+    });
 };
 
 const profile = async (req, res) => {

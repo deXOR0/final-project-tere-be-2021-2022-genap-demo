@@ -18,7 +18,7 @@
             <li class="nav-item">
                 <a href="/about" class="nav-link text-dark">About</a>
             </li>
-            <% if (loggedIn) { %>
+            <% if (locals.loggedIn) { %>
             <li class="nav-item">
                 <div class="dropdown nav-link">
                     <a
@@ -28,7 +28,7 @@
                         data-bs-toggle="dropdown"
                         aria-expanded="false"
                     >
-                        <%= fullName %>
+                        <%= locals.fullName %>
                     </a>
                     <ul
                         class="dropdown-menu text-small shadow"
