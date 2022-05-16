@@ -5,7 +5,7 @@ const session = require("express-session");
 const flash = require("connect-flash");
 const app = express();
 
-const PORT = 8000;
+const PORT = process.env.PORT || 8000;
 
 // Connect to SQLite
 const sequelize = new Sequelize({
