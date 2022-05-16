@@ -11,10 +11,7 @@ module.exports = {
             ClassID: {
                 type: Sequelize.INTEGER,
                 references: {
-                    model: {
-                        tableName: "Class",
-                        schema: "schema",
-                    },
+                    model: "Classes",
                     key: "ClassID",
                 },
             },

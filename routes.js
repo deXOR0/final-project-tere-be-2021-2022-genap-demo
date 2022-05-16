@@ -7,8 +7,12 @@ const {
     editProfile,
     editProfileAction,
     createClass,
+    createClassAction,
     createStudent,
+    createStudentAction,
+    deleteStudentAction,
     editClass,
+    editClassAction,
     viewClass,
     login,
     loginAction,
@@ -27,10 +31,17 @@ router.get("/profile", profile);
 router.get("/profile/edit", editProfile);
 router.post("/profile/edit", editProfileAction);
 
+// Class
 router.get("/class/create", createClass);
-router.get("/student/create", createStudent);
-router.get("/class/edit", editClass);
-router.get("/class/view", viewClass);
+router.post("/class/create", createClassAction);
+
+router.get("/student/:id/create", createStudent);
+router.post("/student/:id/create", createStudentAction);
+router.post("/student/:id/delete", deleteStudentAction);
+
+router.get("/class/:id/edit", editClass);
+router.post("/class/:id/edit", editClassAction);
+router.get("/class/:id/view", viewClass);
 
 // Auth
 router.get("/login", login);
