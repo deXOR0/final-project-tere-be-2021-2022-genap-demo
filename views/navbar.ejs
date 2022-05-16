@@ -1,0 +1,59 @@
+<div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+        <a
+            href="/"
+            class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none"
+        >
+            <img
+                src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
+                alt=""
+                style="width: 50px"
+            />
+        </a>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <a href="/" class="nav-link text-dark">Home</a>
+            </li>
+            <li class="nav-item">
+                <a href="/about" class="nav-link text-dark">About</a>
+            </li>
+            <% if (loggedIn) { %>
+            <li class="nav-item">
+                <div class="dropdown nav-link">
+                    <a
+                        href="#"
+                        class="d-block link-dark text-decoration-none dropdown-toggle"
+                        id="dropdownUser2"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                    >
+                        <%= fullName %>
+                    </a>
+                    <ul
+                        class="dropdown-menu text-small shadow"
+                        aria-labelledby="dropdownUser2"
+                    >
+                        <li>
+                            <a class="dropdown-item" href="/profile">Profile</a>
+                        </li>
+                        <li>
+                            <form method="post" action="/logout">
+                                <a
+                                    class="dropdown-item"
+                                    onclick="this.parentNode.submit()"
+                                    >Logout</a
+                                >
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <% } else { %>
+            <li class="nav-item">
+                <a class="nav-link text-dark" href="/login">Login</a>
+            </li>
+            <% } %>
+        </ul>
+    </header>
+</div>

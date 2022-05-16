@@ -1,0 +1,23 @@
+{
+    "development": {
+        "username": "root",
+        "password": null,
+        "database": "class-management",
+        "host": "class-management.db",
+        "dialect": "sqlite"
+    },
+    "test": {
+        "username": "root",
+        "password": null,
+        "database": "class-management",
+        "host": "class-management.db",
+        "dialect": "sqlite"
+    },
+    "production": {
+        "username": "root",
+        "password": null,
+        "database": "class-management",
+        "host": "class-management.db",
+        "dialect": "sqlite"
+    }
+}
