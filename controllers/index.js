@@ -27,7 +27,7 @@ const about = (req, res) => {
 
 const profile = async (req, res) => {
     if (!req.session.loggedIn) {
-        res.redirect("/");
+        res.redirect("/login");
         return;
     }
     const { loggedIn, fullName, userId } = req.session;
@@ -52,7 +52,7 @@ const profile = async (req, res) => {
 
 const editProfile = async (req, res) => {
     if (!req.session.loggedIn) {
-        res.redirect("/");
+        res.redirect("/login");
         return;
     }
     const { loggedIn, fullName, userId } = req.session;
@@ -269,7 +269,7 @@ const registerAction = async (req, res) => {
 
 const changePassword = (req, res) => {
     if (!req.session.loggedIn) {
-        res.redirect("/");
+        res.redirect("/login");
         return;
     }
     res.render("auth/change-password.ejs", { messages: req.flash("messages") });

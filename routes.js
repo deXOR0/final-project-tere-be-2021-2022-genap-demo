@@ -34,7 +34,7 @@ router.get("/class/view", viewClass);
 
 // Auth
 router.get("/login", login);
-router.post("/loginAuth", loginAction);
+router.post("/login", loginAction);
 
 router.get("/register", register);
 router.post("/register", registerAction);
